@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-07-16 Sun 12:17 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shots</title>
+<meta name="author" content="Richard Williams" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<style type="text/css">
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap;word-wrap:break-word}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}html{font-family:'PT Sans',sans-serif}pre,code{font-family:'Inconsolata',sans-serif}h1,h2,h3,h4,h5,h6{font-family:'PT Sans Narrow',sans-serif;font-weight:700}html{background-color:#eee8d5;color:#657b83;margin:1em}body{background-color:#fdf6e3;margin:0 auto;max-width:23cm;border:1pt solid #93a1a1;padding:1em}code{background-color:#eee8d5;padding:2px}a{color:#b58900}a:visited{color:#cb4b16}a:hover{color:#cb4b16}h1{color:#d33682}h2,h3,h4,h5,h6{color:#859900}pre{background-color:#fdf6e3;color:#657b83;border:1pt solid #93a1a1;padding:1em;box-shadow:5pt 5pt 8pt #eee8d5}pre code{background-color:#fdf6e3}h1{font-size:2.8em}h2{font-size:2.4em}h3{font-size:1.8em}h4{font-size:1.4em}h5{font-size:1.3em}h6{font-size:1.15em}.tag{background-color:#eee8d5;color:#d33682;padding:0 .2em}.todo,.next,.done{color:#fdf6e3;background-color:#dc322f;padding:0 .2em}.tag{-webkit-border-radius:.35em;-moz-border-radius:.35em;border-radius:.35em}.TODO{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#2aa198}.NEXT{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#268bd2}.ACTIVE{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#268bd2}.DONE{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#859900}.WAITING{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#cb4b16}.HOLD{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#d33682}.NOTE{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#d33682}.CANCELLED{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#859900}
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Shots</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org08b6b65">Shots</a></li>
+<li><a href="#org3313ba3">Video one</a></li>
+<li><a href="#org707c358">Video two:</a></li>
+<li><a href="#org4341d8f">English to talk about shots</a></li>
+<li><a href="#org4c6792e">Test yourself</a></li>
+</ul>
+</div>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+
+<div id="outline-container-org08b6b65" class="outline-2">
+<h2 id="org08b6b65">Shots</h2>
+<div class="outline-text-2" id="text-org08b6b65">
+<p>
+We can break films down into scenes and shots. We have to understand, and be able to talk about different types of shot to choose the best shot to tell our story.
+</p>
+<ul class="org-ul">
+<li>A scene is&#x2026;</li>
+<li>A shot is&#x2026;</li>
+</ul>
+
+<p>
+Test yourself. Can you remember what these words mean? You can check your answers here: <code>Link to section at bottom of page.</code>
+</p>
+
+<p>
+You can review more film words here: <code>link to film words page</code>
+</p>
+
+<p>
+In the lesson we learned about the following shots:
+</p>
+<pre class="example">
+establishing shot
+medium shot
+close up
+extreme close-up
+over the shoulder shot
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org3313ba3" class="outline-2">
+<h2 id="org3313ba3">Video one</h2>
+<div class="outline-text-2" id="text-org3313ba3">
+<p>
+<code>Introduction to shot types and camera movement</code>
+</p>
+
+<p>
+This is a longer version of the video we watched in lesson.
+</p>
+
+<p>
+You don&rsquo;t have to understand everything. Please read the subtitles at the top of the screen but you don&rsquo;t have to reads the subtitles at the bottom.
+</p>
+
+<iframe width="426" height="240" src="https://www.youtube.com/embed/lRo2IqYbEaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>
+Here is a list of shots in the video with the time. You don&rsquo;t have to remember all of these shots but think about how they are used to tell a story.
+</p>
+
+<pre class="example">
+0:07 establishing shot
+0:30 medium shot
+1:05 close up
+1:35 extreme close-up
+2:41 master shot
+3:03 over the shoulder shot
+3:49 high-angle shot
+4:29 low-angle shot
+5:11 point-of-view shot
+5:43 dutch angle
+6:15 dolly zoom
+6:49 long take
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org707c358" class="outline-2">
+<h2 id="org707c358">Video two:</h2>
+<div class="outline-text-2" id="text-org707c358">
+<p>
+<code>Shot sizes the ultimate guide</code>
+</p>
+
+<p>
+This is another great video about shots. Please watch the whole video. Don&rsquo;t worry if you don&rsquo;t understand everything.
+</p>
+
+<iframe width="426" height="240" src="https://www.youtube.com/embed/AyML8xuKfoc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+
+
+<div id="outline-container-org4341d8f" class="outline-2">
+<h2 id="org4341d8f">English to talk about shots</h2>
+<div class="outline-text-2" id="text-org4341d8f">
+<ul class="org-ul">
+<li>scene</li>
+<li>shot</li>
+<li>(camera) angle</li>
+<li>(camera) height</li>
+<li>(camera) distance</li>
+<li>close up</li>
+<li>focus</li>
+<li>zoom (in - out)</li>
+<li>frame</li>
+<li>composition</li>
+</ul>
+
+<p>
+Link to film language reference
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4c6792e" class="outline-2">
+<h2 id="org4c6792e">Test yourself</h2>
+<div class="outline-text-2" id="text-org4c6792e">
+<p>
+Can you match the shot name to the pictures?
+</p>
+
+<ol class="org-ol">
+<li>establishing shot</li>
+<li>extreme close up</li>
+<li>medium shot</li>
+<li>over the shoulder shot</li>
+<li>two shot</li>
+<li>close up</li>
+</ol>
+
+
+<div id="org22173a7" class="figure">
+<p><img src="https://sendagirich.github.io/assets/images/close-up.jpeg" alt="close-up.jpeg" width="100%" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Shot A</p>
+</div>
+
+
+
+<div id="orga9d5395" class="figure">
+<p><img src="https://sendagirich.github.io/assets/images/over_the_shoulder_shot.jpeg" alt="over_the_shoulder_shot.jpeg" width="100%" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Shot B</p>
+</div>
+
+
+
+<div id="org4141a6e" class="figure">
+<p><img src="https://sendagirich.github.io/assets/images/establishing_shot.jpg" alt="establishing_shot.jpg" width="100%" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Shot C</p>
+</div>
+
+
+<div id="org5678238" class="figure">
+<p><img src="https://sendagirich.github.io/assets/images/extreme-close-up.jpg" alt="extreme-close-up.jpg" width="100%" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Shot D</p>
+</div>
+
+
+<div id="org39785c8" class="figure">
+<p><img src="https://sendagirich.github.io/assets/images/two-shot.jpg" alt="two-shot.jpg" width="100%" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Shot E</p>
+</div>
+
+
+<div id="orged886f8" class="figure">
+<p><img src="https://sendagirich.github.io/assets/images/medium-wide-shot.jpg" alt="medium-wide-shot.jpg" width="100%" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Shot F</p>
+</div>
+
+<p>
+Check your answers here: <a href="https://sendagirich.github.io/shots_answers.html">Answers</a>
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<tbody>
+<tr>
+</tr>
+</tbody>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<ul class="org-ul">
+<li><a href="https://sendagirich.github.io/school.html">Main page</a></li>
+<li><a href="https://sendagirich.github.io/school_materials.html">School Materials</a></li>
+<li><a href="https://sendagirich.github.io/extra_materials.html">Extra Materials</a></li>
+<li>Useful English</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Richard Williams</p>
+<p class="date">Created: 2023-07-16 Sun 12:17</p>
+</div>
+</body>
+</html>
